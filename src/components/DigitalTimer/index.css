@@ -1,0 +1,191 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto';
+}
+
+.bg-container {
+  background-image: linear-gradient(#ffffff, 20%, #cffcf1, 70%, #defafe);
+  min-height: 100vh;
+  padding: 2rem;
+  text-align: center;
+}
+.main-heading {
+  color: #0f172a;
+  font-weight: bold;
+  font-size: 2.5rem;
+  margin-top: 10%;
+  margin-bottom: 2rem;
+}
+.content-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.timer-container {
+  background: center / cover no-repeat
+    url('https://assets.ccbp.in/frontend/react-js/digital-timer-elapsed-bg.png');
+  margin-bottom: 2rem;
+  height: 300px;
+  width: 411px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.white-circle {
+  background-color: white;
+  height: 140px;
+  width: 140px;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+}
+.timer-text {
+  color: #00d9f5;
+  font-weight: bold;
+  font-size: 2.5rem;
+}
+.timer-state {
+  font-size: 1.2rem;
+  font-weight: 900;
+  color: #1e293b;
+}
+.timer-controls {
+  display: flex;
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+.start-pause-container,
+.reset-container {
+  display: flex;
+  align-items: center;
+}
+.pause-play-btn,
+.reset-btn {
+  display: flex;
+  background-color: transparent;
+  align-items: center;
+  border: none;
+  gap: 0.5rem;
+  cursor: pointer;
+  width: 143.9px;
+  height: 43.33px;
+}
+.overflow-box {
+  overflow: hidden;
+}
+.pause-play-btn img,
+.reset-btn img {
+  width: 40px;
+}
+.pause-play-animation {
+  animation: slide-in 0.5s ease-in-out;
+}
+@keyframes slide-in {
+  from {
+    transform: translateX(-100%) scale(1);
+    opacity: 1;
+  }
+  to {
+    transform: translateX(100%) scale(0.5);
+    opacity: 0;
+  }
+}
+
+.rotate {
+  animation: rotate 0.5s cubic-bezier(0.9, 0.21, 0.45, 1.38);
+}
+@keyframes rotate {
+  from {
+    transform: rotateZ(0deg);
+  }
+  to {
+    transform: rotateZ(-360deg);
+  }
+}
+
+.start-pause-text,
+.reset-text {
+  font-size: 1.7rem;
+  font-weight: bold;
+  color: #0f172a;
+}
+.timer-limit-text {
+  font-size: 1.2rem;
+  color: #1e293b;
+  font-weight: bold;
+  margin-bottom: 2rem;
+}
+.plus-minus-controls-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+.minus-btn,
+.plus-btn {
+  font-weight: bold;
+  font-size: 3rem;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+.minus-btn:hover,
+.plus-btn:hover {
+  transform: scale(1.2);
+}
+.timer-limit {
+  background-image: url('https://assets.ccbp.in/frontend/react-js/play-icon-img.png');
+  background-size: 200%;
+  background-position: center;
+  border-radius: 10px;
+  padding: 0.75rem 2.5rem;
+}
+.timer-limit p {
+  font-size: 2rem;
+  font-weight: bold;
+}
+@media (min-width: 768px) {
+  .bg-container {
+    background-image: linear-gradient(
+      to right,
+      #ffffff,
+      10%,
+      #cffcf1,
+      70%,
+      #defafe
+    );
+  }
+  .main-heading {
+    font-size: 3rem;
+    margin-bottom: 3rem;
+  }
+  .content-wrapper {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  .timer-container {
+    height: 400px;
+    width: 511px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .white-circle {
+    height: 170px;
+    width: 170px;
+  }
+  .timer-text {
+    font-size: 2.8rem;
+  }
+  .timer-state {
+    font-size: 1.3rem;
+  }
+}
